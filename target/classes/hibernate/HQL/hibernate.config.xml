@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.password">Arun@123</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;DatabaseName=master</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="hibernate.connection.pool_size">10</property>
+         
+        <!--
+        <property name="hbm2ddl.auto">create</property>       :-> drop table if exist and create new table.
+        <property name="hbm2ddl.auto">update</property>       :-> create table if not exist, insert, alter.
+        <property name="hbm2ddl.auto">validate</property>     :-> validate mapping file with table, insert less column if required.
+        <property name="hbm2ddl.auto">create-drop</property>  :-> drop table if exist, create new table and drop.
+         -->
+        <property name="hbm2ddl.auto">update</property>
+         
+        <property name="show_sql">true</property> 
+        <mapping resource="hibernate/HQL/hibernate.hbm.xml"/>
+        <mapping resource="hibernate/HQL/hibernateHQL.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

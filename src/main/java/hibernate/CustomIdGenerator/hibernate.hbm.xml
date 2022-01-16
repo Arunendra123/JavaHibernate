@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+  <class name="hibernate.CustomIdGenerator.Student" table="Student_table_customid">
+     <id name="id" column="sid">
+         <!-- <generator class="assigned"></generator>  -->
+         <!-- <generator class="increment"></generator> -->
+         <!-- <generator class="identity"></generator>  -->
+         <!-- <generator class="sequence"></generator>  -->
+        
+         <!-- <generator class="sequence">
+                    <param name="sequence">hibernate_sequence</param> 
+         </generator>  -->
+
+         <generator class="hibernate.CustomIdGenerator.CustomID"></generator>   
+     </id>
+     <property name="name" column="sname"/>
+     <property name="rollNo" column="srollNo"/>
+     <property name="address" column="saddress"/>
+     <property name="mobileNo" column="smobileNo"/>
+  </class>
+</hibernate-mapping>

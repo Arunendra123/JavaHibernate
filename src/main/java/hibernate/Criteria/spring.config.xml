@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+ <bean id="student_1" class="hibernate.Criteria.Student" p:name="Arun" p:rollNo="12" p:address="Chandauli" p:mobileNo="88343838"/>
+ <bean id="student_2" class="hibernate.Criteria.Student" p:name="Dheeru" p:rollNo="12" p:address="Chandauli" p:mobileNo="098765667"/>
+ <bean id="student_3" class="hibernate.Criteria.Student" p:name="Chandan" p:rollNo="12" p:address="Chandauli" p:mobileNo="5645432"/>
+ <bean id="student_4" class="hibernate.Criteria.Student" p:name="Pinku" p:rollNo="12" p:address="Chandauli" p:mobileNo="7757657"/>
+ <bean id="dbconnection" class="hibernate.Criteria.DBConnection" factory-method="getInstance"/>
+</beans>
